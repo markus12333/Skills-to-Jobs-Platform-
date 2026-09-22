@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Skill to Job - My Skills</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Skill to Job</h1>
+    <p>Build your skill profile</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="jobs.html">Jobs</a>
+    <a href="skills.html">My Skills</a>
+    <a href="about.html">About</a>
+</nav>
+
+
+<section class="skills-page">
+
+    <h2>My Skills</h2>
+
+    <p>
+        Add the skills that you currently have.
+    </p>
+
+    <input
+        type="text"
+        id="skillInput"
+        placeholder="Example: communication"
+    >
+
+    <button onclick="addSkill()">
+        Add Skill
+    </button>
+
+
+    <h3>My Skill List</h3>
+
+    <ul id="skillList"></ul>
+
+</section>
+
+
+<footer>
+    <p>Skill to Job &copy; 2026 | Student Project</p>
+</footer>
+
+
+<script>
+
+function addSkill() {
+
+    let input =
+        document.getElementById("skillInput");
+
+    let skill =
+        input.value.trim();
+
+
+    if (skill == "") {
+
+        alert("Please enter a skill.");
+
+        return;
+    }
+
+
+    let list =
+        document.getElementById("skillList");
+
+
+    let item =
+        document.createElement("li");
+
+
+    item.innerText = skill;
+
+
+    list.appendChild(item);
+
+
+    input.value = "";
+
+}
+
+</script>
+
+</body>
+</html>
