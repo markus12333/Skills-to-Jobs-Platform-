@@ -1,135 +1,337 @@
-* {
-    box-sizing: border-box;
-}
+/* ===== GENERAL ===== */
+
+* { box-sizing: border-box; }
 
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
     color: #333;
+    background: radial-gradient(circle at 50% 0%, #e0ecff 0%, #f4f6f8 45%) fixed;
 }
 
+a { text-decoration: none; }
 
-/* HEADER */
+
+/* ===== HEADER ===== */
 
 header {
-    background-color: #2563eb;
+    position: relative;
+    overflow: hidden;
+    padding: 30px;
     color: white;
     text-align: center;
-    padding: 30px;
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 60%, #3b82f6 100%);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
+
+/* spinning light rays */
+header::before {
+    content: "";
+    position: absolute;
+    inset: -50%;
+    background: repeating-conic-gradient(rgba(255, 255, 255, 0.07) 0deg 4deg, transparent 4deg 14deg);
+    animation: spin 30s linear infinite;
+    pointer-events: none;
+}
+
+header h1, header p { position: relative; z-index: 1; }
 
 header h1 {
     margin: 0;
+    font-size: 42px;
+    font-style: italic;
+    letter-spacing: 2px;
 }
 
+@keyframes spin { to { transform: rotate(360deg); } }
 
-/* NAVIGATION */
+
+/* ===== NAVIGATION ===== */
 
 nav {
-    background-color: white;
-    text-align: center;
     padding: 15px;
-    border-bottom: 1px solid #ddd;
-}
-
-nav a {
-    text-decoration: none;
-    color: #2563eb;
-    margin: 0 12px;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-
-/* HOME */
-
-.hero {
     text-align: center;
-    padding: 70px 20px;
-    background-color: #e8f0ff;
-}
-
-.hero h2 {
-    font-size: 32px;
-}
-
-
-.home-content {
-    text-align: center;
-    padding: 40px 20px;
-}
-
-.steps {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.step {
     background-color: white;
-    width: 250px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 7px #ccc;
+    border-bottom: 3px solid #2563eb;
 }
 
-
-/* SEARCH */
-
-.search-box {
-    background-color: white;
-    text-align: center;
-    padding: 35px;
-    margin: 25px auto;
-    width: 90%;
-    max-width: 800px;
-    border-radius: 8px;
-}
+nav a { margin: 0 12px; color: #1e3a8a; font-weight: bold; transition: 0.2s; }
+nav a:hover { color: #2563eb; text-decoration: underline; }
 
 
-/* INPUT */
-
-input {
-    padding: 12px;
-    width: 60%;
-    max-width: 500px;
-    border: 1px solid #aaa;
-    border-radius: 5px;
-}
-
-
-/* BUTTON */
+/* ===== BUTTONS ===== */
 
 button {
-    padding: 12px 16px;
     margin: 5px;
+    padding: 12px 16px;
     border: none;
     border-radius: 5px;
-    background-color: #2563eb;
     color: white;
+    font-weight: bold;
     cursor: pointer;
+    background: #2563eb;
+    transition: transform 0.15s, box-shadow 0.2s;
 }
 
 button:hover {
-    background-color: #1749b5;
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 0 14px #3b82f6;
+}
+
+button:focus-visible { outline: none; box-shadow: 0 0 10px rgba(37, 99, 235, 0.6); }
+
+.btn-outline { background: white; color: #1e3a8a; border: 2px solid #2563eb; }
+.btn-outline:hover { color: white; }
+
+
+/* ===== HOME ===== */
+
+.hero {
+    padding: 70px 20px;
+    text-align: center;
+    background: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%);
+}
+
+.hero h2 { font-size: 32px; color: #1e3a8a; }
+
+.home-content { padding: 40px 20px; text-align: center; }
+
+.steps, .stats, .team {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.step {
+    width: 250px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    border-top: 4px solid #2563eb;
+    box-shadow: 0 2px 7px #ccc;
+    transition: 0.2s;
+}
+
+.page-card { text-align: center; }
+.page-icon { font-size: 40px; }
+
+.stats { padding: 30px 20px 0; }
+
+.stat {
+    width: 200px;
+    padding: 15px;
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+    border-bottom: 4px solid #1e3a8a;
+    box-shadow: 0 2px 8px #ddd;
+}
+
+.stat h3 { margin: 0; font-size: 34px; color: #2563eb; }
+.stat p { margin: 5px 0 0; font-weight: bold; color: #0f172a; }
+
+.cta {
+    margin-top: 30px;
+    padding: 50px 20px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+}
+
+.cta h2 { margin-top: 0; font-size: 30px; }
+.cta button { padding: 14px 28px; font-size: 16px; color: #1e3a8a; background: white; }
+.cta button:hover { background: #dbeafe; }
+
+
+/* ===== MASCOT ===== */
+
+.mascot { position: relative; width: 130px; height: 150px; margin: 0 auto 10px; }
+
+.mascot-body {
+    position: absolute;
+    left: 25px;
+    top: 10px;
+    width: 80px;
+    height: 100px;
+    border-radius: 40px;
+    background: linear-gradient(135deg, #60a5fa, #2563eb);
+    box-shadow: 0 0 18px rgba(37, 99, 235, 0.6);
+}
+
+.eye {
+    position: absolute;
+    top: 30px;
+    width: 10px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #0f172a;
+}
+
+.eye.left  { left: 22px; }
+.eye.right { right: 22px; }
+
+.smile {
+    position: absolute;
+    left: 25px;
+    top: 52px;
+    width: 30px;
+    height: 15px;
+    border-bottom: 4px solid #0f172a;
+    border-radius: 0 0 20px 20px;
+}
+
+.arm {
+    position: absolute;
+    width: 12px;
+    height: 45px;
+    border-radius: 6px;
+    background-color: #2563eb;
+}
+
+.arm.wave {
+    left: 12px;
+    top: 0;
+    transform-origin: bottom;
+    animation: wave 1s ease-in-out infinite alternate;
+}
+
+.arm.hold { right: 14px; top: 50px; transform: rotate(20deg); }
+
+.briefcase {
+    position: absolute;
+    right: 0;
+    top: 95px;
+    width: 34px;
+    height: 26px;
+    border-radius: 4px;
+    background-color: #0f172a;
+}
+
+/* briefcase handle */
+.briefcase::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: -8px;
+    width: 10px;
+    height: 6px;
+    border: 3px solid #0f172a;
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
+}
+
+@keyframes wave {
+    from { transform: rotate(-40deg); }
+    to   { transform: rotate(-10deg); }
 }
 
 
-/* JOBS */
+/* ===== WHITE BOXES (search, skills, about) ===== */
+
+.search-box, .skills-page, .about-page {
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 35px;
+    background-color: white;
+    border-radius: 8px;
+    border-top: 4px solid #2563eb;
+}
+
+.search-box {
+    position: relative;
+    overflow: hidden;
+    margin: 25px auto;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.25);
+    background:
+        radial-gradient(circle at 0% 100%, rgba(96, 165, 250, 0.35) 0%, transparent 35%),
+        radial-gradient(circle at 100% 0%, rgba(30, 58, 138, 0.18) 0%, transparent 35%),
+        white;
+}
+
+/* light rays in the corner */
+.search-box::before {
+    content: "";
+    position: absolute;
+    top: -120px;
+    right: -120px;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: repeating-conic-gradient(rgba(37, 99, 235, 0.12) 0deg 6deg, transparent 6deg 18deg);
+    pointer-events: none;
+}
+
+.search-box h2 { position: relative; font-size: 34px; font-style: italic; color: #0f172a; }
+.search-box p { position: relative; color: #475569; }
+.search-box button { position: relative; padding: 12px 26px; border-radius: 30px; }
+
+
+/* ===== TITLES ===== */
 
 .section-title {
-    text-align: center;
     margin-top: 35px;
+    text-align: center;
+    font-size: 30px;
+    font-style: italic;
+    color: #1e3a8a;
 }
 
-.filter {
-    text-align: center;
-    margin: 20px;
+/* line under the title */
+.section-title::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 4px;
+    margin: 10px auto 0;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #60a5fa, #2563eb, #1e3a8a);
+    box-shadow: 0 0 8px #3b82f6;
 }
+
+
+/* ===== CATEGORY BUTTONS ===== */
+
+.filter {
+    max-width: 1450px;
+    margin: 20px auto;
+    padding: 25px 20px;
+    text-align: center;
+    border-radius: 60px;
+    background: linear-gradient(90deg, rgba(96, 165, 250, 0.15), rgba(37, 99, 235, 0.18), rgba(30, 58, 138, 0.12));
+}
+
+.filter a {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 18px;
+    font-weight: bold;
+    color: #1e3a8a;
+    background: white;
+    border: 2px solid #2563eb;
+    border-radius: 20px;
+    transition: 0.2s;
+}
+
+.filter a:hover, .filter a:focus-visible {
+    color: white;
+    background: #2563eb;
+    box-shadow: 0 0 14px rgba(37, 99, 235, 0.6);
+}
+
+.filter a:hover { transform: translateY(-3px) scale(1.05); }
+
+
+/* ===== JOBS ===== */
+
+.cat-section { padding-top: 10px; }
+.cat-title { text-align: center; color: #0f172a; font-style: italic; }
+
+/* when a category is clicked (example: jobs.html#healthcare), hide the others */
+body:has(.cat-section:target) .cat-section:not(:target) { display: none; }
 
 .job-container {
     display: flex;
@@ -140,444 +342,215 @@ button:hover {
 }
 
 .job-card {
-    background-color: white;
+    position: relative;
+    overflow: hidden;
     width: 300px;
     padding: 20px;
+    background-color: white;
     border-radius: 8px;
+    border-top: 4px solid #2563eb;
+    border-left: 4px solid #1e3a8a;
     box-shadow: 0 2px 8px #ccc;
+    transition: 0.2s;
 }
 
-.job-card h3 {
-    color: #2563eb;
+.step:hover, .job-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 18px rgba(37, 99, 235, 0.55);
 }
 
-.job-card p {
-    line-height: 1.5;
+/* glowing circle in the corner */
+.job-card::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(96, 165, 250, 0.6) 0%, rgba(37, 99, 235, 0.25) 45%, transparent 70%);
+    pointer-events: none;
 }
 
-
-/* CATEGORY */
+.home-content .job-card { text-align: left; }
+.job-card h3 { margin-top: 0; font-size: 20px; color: #1e3a8a; }
+.job-card p { margin: 6px 0; font-size: 15px; line-height: 1.5; }
+.job-card .info { line-height: 1.9; }
+.job-card .company { margin-top: -10px; font-weight: bold; color: #2563eb; }
+.job-card .description { margin: 12px 0; color: #555; }
 
 .category {
     display: inline-block;
-    background-color: #e8f0ff;
-    color: #1749b5;
-    padding: 5px 8px;
-    border-radius: 4px;
+    padding: 5px 12px;
     font-size: 13px;
-}
-
-
-/* MATCH */
-
-.match {
     font-weight: bold;
-    color: green;
+    color: #1e3a8a;
+    background-color: #dbeafe;
+    border: 1px solid #3b82f6;
+    border-radius: 20px;
 }
 
+.skill-tags { margin: 10px 0; }
 
-/* SKILLS */
-
-.skills-page {
-    background-color: white;
-    width: 90%;
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 35px;
-    border-radius: 8px;
+.skill-tags span {
+    display: inline-block;
+    margin: 3px;
+    padding: 4px 10px;
+    font-size: 12px;
+    color: #1e3a8a;
+    background-color: #e0e7ff;
+    border-radius: 12px;
 }
 
-.skills-page h2 {
-    color: #2563eb;
-}
-
-.skills-page li {
-    margin: 10px;
-}
-
-
-/* ABOUT */
-
-.about-page {
-    background-color: white;
-    width: 90%;
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 35px;
-    border-radius: 8px;
-    line-height: 1.6;
-}
-
-.about-page h2 {
-    color: #2563eb;
-}
-
-
-/* FOOTER */
-
-footer {
-    margin-top: 40px;
-    background-color: #222;
+/* apply button */
+.apply-btn {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
     color: white;
-    text-align: center;
-    padding: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    background: #2563eb;
 }
 
-
-/* MOBILE */
-
-@media (max-width: 600px) {
-
-    input {
-        width: 90%;
-    }
-
-    .job-card {
-        width: 90%;
-    }
-
-    nav a {
-        display: inline-block;
-        margin: 6px;
-    }
-
-}
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Skill to Job - My Skills</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<header>
-    <h1>Skill to Job</h1>
-    <p>Build your skill profile</p>
-</header>
-
-<nav>
-    <a href="index.html">Home</a>
-    <a href="jobs.html">Jobs</a>
-    <a href="skills.html">My Skills</a>
-    <a href="about.html">About</a>
-</nav>
+.apply-btn:hover { background: #1d4ed8; box-shadow: 0 0 14px #3b82f6; }
 
 
-<section class="skills-page">
+/* ===== MY SKILLS ===== */
 
-    <h2>My Skills</h2>
+.skills-page { counter-reset: myskills; }
+.skills-page h2, .about-page h2 { color: #1e3a8a; }
+.skills-page h3 { margin-bottom: 8px; color: #0f172a; }
 
-    <p>
-        Add the skills that you currently have.
-    </p>
-
-    <input
-        type="text"
-        id="skillInput"
-        placeholder="Example: communication"
-    >
-
-    <button onclick="addSkill()">
-        Add Skill
-    </button>
-
-
-    <h3>My Skill List</h3>
-
-    <ul id="skillList"></ul>
-
-</section>
-
-
-<footer>
-    <p>Skill to Job &copy; 2026 | Student Project</p>
-</footer>
-
-
-<script>
-
-function addSkill() {
-
-    let input =
-        document.getElementById("skillInput");
-
-    let skill =
-        input.value.trim();
-
-
-    if (skill == "") {
-
-        alert("Please enter a skill.");
-
-        return;
-    }
-
-
-    let list =
-        document.getElementById("skillList");
-
-
-    let item =
-        document.createElement("li");
-
-
-    item.innerText = skill;
-
-
-    list.appendChild(item);
-
-
-    input.value = "";
-
+/* banner: Learn -> Practice -> Get Hired */
+.skills-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+    padding: 30px 20px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #1e3a8a, #3b82f6);
 }
 
-</script>
-
-</body>
-</html>
-10:14 PM
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
-    color: #333;
-}
-
-
-/* HEADER */
-
-header {
-    background-color: #2563eb;
-    color: white;
-    text-align: center;
-    padding: 30px;
-}
-
-header h1 {
-    margin: 0;
-}
-
-
-/* NAVIGATION */
-
-nav {
-    background-color: white;
-    text-align: center;
+.banner-step {
+    width: 120px;
     padding: 15px;
-    border-bottom: 1px solid #ddd;
-}
-
-nav a {
-    text-decoration: none;
-    color: #2563eb;
-    margin: 0 12px;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-
-/* HOME */
-
-.hero {
     text-align: center;
-    padding: 70px 20px;
-    background-color: #e8f0ff;
-}
-
-.hero h2 {
-    font-size: 32px;
-}
-
-
-.home-content {
-    text-align: center;
-    padding: 40px 20px;
-}
-
-.steps {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.step {
+    font-size: 40px;
     background-color: white;
-    width: 250px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 7px #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+.banner-step p { margin: 8px 0 0; font-size: 16px; font-weight: bold; color: #1e3a8a; }
+.arrow { font-size: 30px; color: white; }
+.banner-text { margin-bottom: 25px; text-align: center; font-size: 14px; color: #1e3a8a; }
 
-/* SEARCH */
+/* hide the checkbox but keep it working (display: none would stop the counter) */
+.skill-picker input { position: absolute; opacity: 0; width: 0; height: 0; }
 
-.search-box {
-    background-color: white;
-    text-align: center;
-    padding: 35px;
-    margin: 25px auto;
-    width: 90%;
-    max-width: 800px;
-    border-radius: 8px;
-}
-
-
-/* INPUT */
-
-input {
-    padding: 12px;
-    width: 60%;
-    max-width: 500px;
-    border: 1px solid #aaa;
-    border-radius: 5px;
-}
-
-
-/* BUTTON */
-
-button {
-    padding: 12px 16px;
-    margin: 5px;
-    border: none;
-    border-radius: 5px;
-    background-color: #2563eb;
-    color: white;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #1749b5;
-}
-
-
-/* JOBS */
-
-.section-title {
-    text-align: center;
-    margin-top: 35px;
-}
-
-.filter {
-    text-align: center;
-    margin: 20px;
-}
-
-.job-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-.job-card {
-    background-color: white;
-    width: 300px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px #ccc;
-}
-
-.job-card h3 {
-    color: #2563eb;
-}
-
-.job-card p {
-    line-height: 1.5;
-}
-
-
-/* CATEGORY */
-
-.category {
+.skill-picker label {
     display: inline-block;
-    background-color: #e8f0ff;
-    color: #1749b5;
-    padding: 5px 8px;
-    border-radius: 4px;
-    font-size: 13px;
-}
-
-
-/* MATCH */
-
-.match {
+    margin: 4px;
+    padding: 8px 16px;
     font-weight: bold;
-    color: green;
+    color: #1e3a8a;
+    cursor: pointer;
+    background-color: #eff6ff;
+    border: 2px solid #3b82f6;
+    border-radius: 20px;
+    transition: 0.2s;
+}
+
+.skill-picker label:hover { transform: translateY(-2px); }
+
+/* picked skills light up and get counted */
+.skill-picker input:checked { counter-increment: myskills; }
+
+.skill-picker input:checked + label {
+    color: white;
+    background: #2563eb;
+    border-color: transparent;
+    box-shadow: 0 0 12px rgba(37, 99, 235, 0.6);
+}
+
+.skill-total::after {
+    content: "You picked " counter(myskills) " skill(s).";
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 16px;
+    font-weight: bold;
+    color: #15803d;
+    background-color: #e7f9ee;
+    border-radius: 20px;
 }
 
 
-/* SKILLS */
+/* ===== ABOUT ===== */
 
-.skills-page {
-    background-color: white;
-    width: 90%;
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 35px;
-    border-radius: 8px;
+.about-page { line-height: 1.6; }
+
+.team { gap: 30px; margin: 20px 0; }
+
+.team-member {
+    width: 340px;
+    padding: 20px;
+    text-align: center;
+    background-color: #eff6ff;
+    border-radius: 12px;
+    border-top: 4px solid #2563eb;
+    box-shadow: 0 2px 10px #ddd;
 }
 
-.skills-page h2 {
-    color: #2563eb;
+/* PHOTO */
+.team-member img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 4px solid #2563eb;
+    background-color: #dbeafe;
 }
 
-.skills-page li {
-    margin: 10px;
-}
+.team-member h3 { margin: 15px 0 5px; font-size: 22px; color: #1e3a8a; }
+.team-member p { margin: 0; font-size: 16px; color: #777; }
 
+.map-box { text-align: center; }
 
-/* ABOUT */
-
-.about-page {
-    background-color: white;
-    width: 90%;
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 35px;
-    border-radius: 8px;
-    line-height: 1.6;
-}
-
-.about-page h2 {
-    color: #2563eb;
+.map-box iframe {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(37, 99, 235, 0.35);
 }
 
 
-/* FOOTER */
+/* ===== FOOTER ===== */
 
 footer {
     margin-top: 40px;
-    background-color: #222;
-    color: white;
-    text-align: center;
     padding: 20px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(90deg, #0f172a, #0b1a33);
+    border-top: 3px solid #2563eb;
 }
 
 
-/* MOBILE */
+/* ===== MOBILE ===== */
 
 @media (max-width: 600px) {
+    .job-card, .stat, .team-member { width: 90%; }
+    nav a { display: inline-block; margin: 6px; }
+    .filter { border-radius: 20px; }
+    .search-box h2 { font-size: 26px; }
+    .cta h2 { font-size: 24px; }
+}
 
-    input {
-        width: 90%;
-    }
-
-    .job-card {
-        width: 90%;
-    }
-
-    nav a {
-        display: inline-block;
-        margin: 6px;
-    }
-
+/* stop the spinning for users who want less motion */
+@media (prefers-reduced-motion: reduce) {
+    header::before { animation: none; }
 }

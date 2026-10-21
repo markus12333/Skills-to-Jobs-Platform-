@@ -24,24 +24,126 @@
 
     <h2>My Skills</h2>
 
+    <!-- BANNER -->
+    <div class="skills-banner">
+        <div class="banner-step">📚<p>Learn</p></div>
+        <span class="arrow">➜</span>
+        <div class="banner-step">💪<p>Practice</p></div>
+        <span class="arrow">➜</span>
+        <div class="banner-step">💼<p>Get Hired</p></div>
+    </div>
+
+    <p class="banner-text">Every skill you add is one step closer to a job.</p>
+
     <p>
-        Add the skills that you currently have.
+        Click the skills that you have. The ones you pick will light up.
     </p>
 
-    <input
-        type="text"
-        id="skillInput"
-        placeholder="Example: communication"
-    >
+    <h3>People Skills</h3>
 
-    <button onclick="addSkill()">
-        Add Skill
-    </button>
+    <div class="skill-picker">
+        <input type="checkbox" id="skill1">
+        <label for="skill1">Communication</label>
 
+        <input type="checkbox" id="skill2">
+        <label for="skill2">Teamwork</label>
 
-    <h3>My Skill List</h3>
+        <input type="checkbox" id="skill3">
+        <label for="skill3">Customer Service</label>
 
-    <ul id="skillList"></ul>
+        <input type="checkbox" id="skill4">
+        <label for="skill4">Patience</label>
+
+        <input type="checkbox" id="skill5">
+        <label for="skill5">Leadership</label>
+
+        <input type="checkbox" id="skill6">
+        <label for="skill6">Public Speaking</label>
+    </div>
+
+    <h3>Computer Skills</h3>
+
+    <div class="skill-picker">
+        <input type="checkbox" id="skill7">
+        <label for="skill7">Computer</label>
+
+        <input type="checkbox" id="skill8">
+        <label for="skill8">Coding</label>
+
+        <input type="checkbox" id="skill9">
+        <label for="skill9">HTML</label>
+
+        <input type="checkbox" id="skill10">
+        <label for="skill10">CSS</label>
+
+        <input type="checkbox" id="skill11">
+        <label for="skill11">Typing</label>
+
+        <input type="checkbox" id="skill12">
+        <label for="skill12">Excel</label>
+
+        <input type="checkbox" id="skill13">
+        <label for="skill13">Canva</label>
+
+        <input type="checkbox" id="skill14">
+        <label for="skill14">Photoshop</label>
+    </div>
+
+    <h3>Work Skills</h3>
+
+    <div class="skill-picker">
+        <input type="checkbox" id="skill15">
+        <label for="skill15">Teaching</label>
+
+        <input type="checkbox" id="skill16">
+        <label for="skill16">Cooking</label>
+
+        <input type="checkbox" id="skill17">
+        <label for="skill17">Patient Care</label>
+
+        <input type="checkbox" id="skill18">
+        <label for="skill18">First Aid</label>
+
+        <input type="checkbox" id="skill19">
+        <label for="skill19">Sales</label>
+
+        <input type="checkbox" id="skill20">
+        <label for="skill20">Accounting</label>
+
+        <input type="checkbox" id="skill21">
+        <label for="skill21">Farming</label>
+
+        <input type="checkbox" id="skill22">
+        <label for="skill22">Repair</label>
+    </div>
+
+    <h3>Creative Skills</h3>
+
+    <div class="skill-picker">
+        <input type="checkbox" id="skill23">
+        <label for="skill23">Creativity</label>
+
+        <input type="checkbox" id="skill24">
+        <label for="skill24">Drawing</label>
+
+        <input type="checkbox" id="skill25">
+        <label for="skill25">Writing</label>
+
+        <input type="checkbox" id="skill26">
+        <label for="skill26">Photography</label>
+
+        <input type="checkbox" id="skill27">
+        <label for="skill27">Video Editing</label>
+
+        <input type="checkbox" id="skill28">
+        <label for="skill28">Social Media</label>
+    </div>
+
+    <p class="skill-total"></p>
+
+    <a href="jobs.html">
+        <button>Find Jobs for My Skills</button>
+    </a>
 
 </section>
 
@@ -49,46 +151,6 @@
 <footer>
     <p>Skill to Job &copy; 2026 | Student Project</p>
 </footer>
-
-
-<script>
-
-function addSkill() {
-
-    let input =
-        document.getElementById("skillInput");
-
-    let skill =
-        input.value.trim();
-
-
-    if (skill == "") {
-
-        alert("Please enter a skill.");
-
-        return;
-    }
-
-
-    let list =
-        document.getElementById("skillList");
-
-
-    let item =
-        document.createElement("li");
-
-
-    item.innerText = skill;
-
-
-    list.appendChild(item);
-
-
-    input.value = "";
-
-}
-
-</script>
 
 </body>
 </html>

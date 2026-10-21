@@ -1,296 +1,65 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Skill to Job - Jobs</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <head>
+        <title>About Us</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
 
-<body>
+        <header>
+            <h1>About Skill to Job</h1>
+            <p>Connecting skills to career opportunities</p>
+        </header>
 
-<header>
-    <h1>Skill to Job</h1>
-    <p>Find a job that matches your skills</p>
-</header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="skills.html">My Skills</a>
+            <a href="about.html">About</a>
+        </nav>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="jobs.html">Jobs</a>
-    <a href="skills.html">My Skills</a>
-    <a href="about.html">About</a>
-</nav>
+        <section class="about-page">
+            <h2>Our Mission</h2>
+            <p>At Skill to Job, our mission is to help individuals find job opportunities that match their unique skill sets. We believe that everyone has valuable skills that can lead to fulfilling careers.</p>
 
+            <h2>How It Works</h2>
+            <p>Users can input their skills, and our platform will provide a list of job opportunities that align with those skills. We aim to make the job search process more efficient and personalized.</p>
 
-<section class="search-box">
 
-    <h2>Find Jobs</h2>
+            <!-- OUR TEAM -->
+            <h2>Meet the Team</h2>
 
-    <p>
-        Enter your skills separated by commas.
-    </p>
+            <div class="team">
 
-    <input
-        type="text"
-        id="skillInput"
-        placeholder="Example: communication, cooking, coding"
-    >
+                <div class="team-member">
+                    <img src="EanJill.jpeg" alt="Photo of Ean Jill Cabansag">
+                    <h3>Ean Jill Cabansag</h3>
+                </div>
 
-    <button onclick="findJobs()">
-        Search
-    </button>
+                <div class="team-member">
+                    <img src="Mark.jpeg" alt="Photo of Mark Lawrence Carangcarang">
+                    <h3>Mark Lawrence Carangcarang</h3>
+                </div>
 
-</section>
+            </div>
 
 
-<section>
+            <h2>Contact Us</h2>
+            <p>If you have any questions or feedback, please reach out to us at info@skilltojob.com</p>
 
-    <h2 class="section-title">
-        Job Categories
-    </h2>
 
-    <div class="filter">
+            <!-- LOCATION (small map) -->
+            <h2>Our Location</h2>
 
-        <button onclick="showAll()">All</button>
+            <div class="map-box">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d29664.104061287886!2d124.83917521250069!3d8.431296789039735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sph!4v1792198279451!5m2!1sen!2sph" width="350" height="220" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+        </section>
 
-        <button onclick="filterJobs('IT')">
-            IT
-        </button>
 
-        <button onclick="filterJobs('Healthcare')">
-            Healthcare
-        </button>
+        <footer>
+            <p>Skill to Job &copy; 2026 | Student Project</p>
+        </footer>
 
-        <button onclick="filterJobs('Education')">
-            Education
-        </button>
-
-        <button onclick="filterJobs('Business')">
-            Business
-        </button>
-
-        <button onclick="filterJobs('Hospitality')">
-            Hospitality
-        </button>
-
-        <button onclick="filterJobs('Engineering')">
-            Engineering
-        </button>
-
-        <button onclick="filterJobs('Agriculture')">
-            Agriculture
-        </button>
-
-        <button onclick="filterJobs('Creative')">
-            Creative
-        </button>
-
-        <button onclick="filterJobs('Skilled Trade')">
-            Skilled Trade
-        </button>
-
-    </div>
-
-</section>
-
-
-<section>
-
-    <div id="jobList" class="job-container"></div>
-
-</section>
-
-
-<footer>
-    <p>Skill to Job &copy; 2026 | Student Project</p>
-</footer>
-
-
-<script>
-
-const jobs = [
-
-    {
-        title: "Junior Web Developer",
-        company: "CodeWorks",
-        category: "IT",
-        location: "Cagayan de Oro",
-        skills: ["html", "css", "javascript", "coding"]
-    },
-
-    {
-        title: "IT Support Assistant",
-        company: "TechCare Solutions",
-        category: "IT",
-        location: "Cebu City",
-        skills: ["computer", "troubleshooting", "communication"]
-    },
-
-    {
-        title: "Nursing Assistant",
-        company: "Community Health Center",
-        category: "Healthcare",
-        location: "Cagayan de Oro",
-        skills: ["healthcare", "communication", "teamwork"]
-    },
-
-    {
-        title: "Medical Office Assistant",
-        company: "HealthPlus Clinic",
-        category: "Healthcare",
-        location: "Davao City",
-        skills: ["organization", "computer", "communication"]
-    },
-
-    {
-        title: "Elementary Teacher",
-        company: "Bright Future School",
-        category: "Education",
-        location: "Iligan City",
-        skills: ["teaching", "communication", "patience"]
-    },
-
-    {
-        title: "Tutor",
-        company: "LearnEasy Center",
-        category: "Education",
-        location: "Cagayan de Oro",
-        skills: ["teaching", "communication", "math"]
-    },
-
-    {
-        title: "Marketing Assistant",
-        company: "MarketPro",
-        category: "Business",
-        location: "Manila",
-        skills: ["marketing", "communication", "social media"]
-    },
-
-    {
-        title: "Sales Representative",
-        company: "Local Business Hub",
-        category: "Business",
-        location: "Cebu City",
-        skills: ["sales", "communication", "customer service"]
-    },
-
-    {
-        title: "Hotel Front Desk Staff",
-        company: "Sunrise Hotel",
-        category: "Hospitality",
-        location: "Cagayan de Oro",
-        skills: ["communication", "customer service", "organization"]
-    },
-
-    {
-        title: "Restaurant Staff",
-        company: "Good Taste Restaurant",
-        category: "Hospitality",
-        location: "Davao City",
-        skills: ["cooking", "customer service", "teamwork"]
-    },
-
-    {
-        title: "Civil Engineering Assistant",
-        company: "BuildRight Engineering",
-        category: "Engineering",
-        location: "Iligan City",
-        skills: ["engineering", "math", "autocad"]
-    },
-
-    {
-        title: "Electrical Technician",
-        company: "PowerFix Services",
-        category: "Engineering",
-        location: "Cagayan de Oro",
-        skills: ["electrical", "repair", "technical"]
-    },
-
-    {
-        title: "Farm Technician",
-        company: "Green Fields Cooperative",
-        category: "Agriculture",
-        location: "Bukidnon",
-        skills: ["farming", "agriculture", "plants"]
-    },
-
-    {
-        title: "Agriculture Assistant",
-        company: "FreshGrow Farm",
-        category: "Agriculture",
-        location: "Misamis Oriental",
-        skills: ["agriculture", "teamwork", "plants"]
-    },
-
-    {
-        title: "Graphic Designer",
-        company: "Creative Studio",
-        category: "Creative",
-        location: "Ca
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Skill to Job - About</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<header>
-    <h1>Skill to Job</h1>
-    <p>Learn more about our platform</p>
-</header>
-
-<nav>
-    <a href="index.html">Home</a>
-    <a href="jobs.html">Jobs</a>
-    <a href="skills.html">My Skills</a>
-    <a href="about.html">About</a>
-</nav>
-
-
-<section class="about-page">
-
-    <h2>About Skill to Job</h2>
-
-    <p>
-        Skill to Job is a student-made platform designed
-        to help people find career opportunities based
-        on their skills.
-    </p>
-
-    <h2>Our Goal</h2>
-
-    <p>
-        Our goal is to help students, graduates, and
-        job seekers discover jobs that match what they
-        can actually do.
-    </p>
-
-    <h2>Different Career Fields</h2>
-
-    <p>
-        Skill to Job is not only for IT careers.
-        The platform includes jobs from different fields,
-        including:
-    </p>
-
-    <ul>
-        <li>Information Technology</li>
-        <li>Healthcare</li>
-        <li>Education</li>
-        <li>Business</li>
-        <li>Hospitality</li>
-        <li>Engineering</li>
-        <li>Agriculture</li>
-        <li>Creative Industries</li>
-        <li>Skilled Trades</li>
-    </ul>
-
-</section>
-
-
-<footer>
-    <p>Skill to Job &copy; 2026 | Student Project</p>
-</footer>
-
-</body>
+    </body>
 </html>

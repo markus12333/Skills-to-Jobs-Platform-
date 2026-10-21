@@ -19,209 +19,544 @@
     <a href="about.html">About</a>
 </nav>
 
-
 <section class="search-box">
 
     <h2>Find Jobs</h2>
 
-    <p>
-        Enter your skills separated by commas.
-    </p>
+    <p>Pick a job category below to see the jobs that fit your skills.</p>
 
-    <input
-        type="text"
-        id="skillInput"
-        placeholder="Example: communication, cooking, coding"
-    >
-
-    <button onclick="findJobs()">
-        Search
-    </button>
+    <a href="skills.html">
+        <button>Check My Skills First</button>
+    </a>
 
 </section>
 
-
 <section>
 
-    <h2 class="section-title">
-        Job Categories
-    </h2>
+    <h2 class="section-title">Job Categories</h2>
 
     <div class="filter">
-
-        <button onclick="showAll()">All</button>
-
-        <button onclick="filterJobs('IT')">
-            IT
-        </button>
-
-        <button onclick="filterJobs('Healthcare')">
-            Healthcare
-        </button>
-
-        <button onclick="filterJobs('Education')">
-            Education
-        </button>
-
-        <button onclick="filterJobs('Business')">
-            Business
-        </button>
-
-        <button onclick="filterJobs('Hospitality')">
-            Hospitality
-        </button>
-
-        <button onclick="filterJobs('Engineering')">
-            Engineering
-        </button>
-
-        <button onclick="filterJobs('Agriculture')">
-            Agriculture
-        </button>
-
-        <button onclick="filterJobs('Creative')">
-            Creative
-        </button>
-
-        <button onclick="filterJobs('Skilled Trade')">
-            Skilled Trade
-        </button>
-
+        <a href="jobs.html">All</a>
+        <a href="#it">IT</a>
+        <a href="#healthcare">Healthcare</a>
+        <a href="#education">Education</a>
+        <a href="#business">Business</a>
+        <a href="#hospitality">Hospitality</a>
+        <a href="#engineering">Engineering</a>
+        <a href="#agriculture">Agriculture</a>
+        <a href="#creative">Creative</a>
+        <a href="#skilled-trade">Skilled Trade</a>
     </div>
 
 </section>
 
-
-<section>
-
-    <div id="jobList" class="job-container"></div>
-
+<section class="cat-section" id="it">
+    <h2 class="cat-title">IT Jobs</h2>
+    <div class="job-container">
+        <div class="job-card">
+            <span class="category">IT</span>
+            <h3>Junior Web Developer</h3>
+            <p class="company">CodeWorks</p>
+            <p class="info">📍 Cagayan de Oro<br>💰 ₱18,000 - ₱25,000 / month<br>🕒 Full-time<br>🎓 Fresh graduates welcome</p>
+            <p class="description">Create and update websites for small businesses.</p>
+            <div class="skill-tags"><span>html</span><span>css</span><span>javascript</span><span>coding</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">IT</span>
+            <h3>IT Support Assistant</h3>
+            <p class="company">TechCare Solutions</p>
+            <p class="info">📍 Cebu City<br>💰 ₱15,000 - ₱20,000 / month<br>🕒 Full-time<br>🎓 No experience needed</p>
+            <p class="description">Help fix computer, printer and internet problems in the office.</p>
+            <div class="skill-tags"><span>computer</span><span>troubleshooting</span><span>communication</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">IT</span>
+            <h3>Data Encoder</h3>
+            <p class="company">InfoLink Services</p>
+            <p class="info">📍 Cagayan de Oro<br>💰 ₱12,000 - ₱15,000 / month<br>🕒 Part-time<br>🎓 No experience needed</p>
+            <p class="description">Type and check records in the company database.</p>
+            <div class="skill-tags"><span>typing</span><span>computer</span><span>organization</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">IT</span>
+            <h3>Network Technician</h3>
+            <p class="company">NetConnect PH</p>
+            <p class="info">📍 Davao City<br>💰 ₱20,000 - ₱28,000 / month<br>🕒 Full-time<br>🎓 1 year experience</p>
+            <p class="description">Install and check routers, cables and internet connections.</p>
+            <div class="skill-tags"><span>networking</span><span>troubleshooting</span><span>computer</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">IT</span>
+            <h3>Software Tester</h3>
+            <p class="company">BugFree Apps</p>
+            <p class="info">📍 Work from home<br>💰 ₱18,000 - ₱24,000 / month<br>🕒 Full-time<br>🎓 Fresh graduates welcome</p>
+            <p class="description">Test apps and websites and report any errors found.</p>
+            <div class="skill-tags"><span>computer</span><span>attention to detail</span><span>coding</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+    </div>
 </section>
 
+<section class="cat-section" id="healthcare">
+    <h2 class="cat-title">Healthcare Jobs</h2>
+    <div class="job-container">
+        <div class="job-card">
+            <span class="category">Healthcare</span>
+            <h3>Doctor</h3>
+            <p class="company">City General Hospital</p>
+            <p class="info">📍 Cagayan de Oro<br>💰 ₱60,000 - ₱90,000 / month<br>🕒 Full-time<br>🎓 Licensed physician</p>
+            <p class="description">Check patients, give diagnosis and prescribe treatment.</p>
+            <div class="skill-tags"><span>medicine</span><span>healthcare</span><span>communication</span><span>decision making</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">Healthcare</span>
+            <h3>Nurse</h3>
+            <p class="company">Community Health Center</p>
+            <p class="info">📍 Cagayan de Oro<br>💰 ₱25,000 - ₱35,000 / month<br>🕒 Full-time<br>🎓 Licensed nurse</p>
+            <p class="description">Take care of patients, check vital signs and help doctors.</p>
+            <div class="skill-tags"><span>healthcare</span><span>patient care</span><span>first aid</span><span>teamwork</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">Healthcare</span>
+            <h3>Pharmacist</h3>
+            <p class="company">HealthPlus Pharmacy</p>
+            <p class="info">📍 Davao City<br>💰 ₱22,000 - ₱30,000 / month<br>🕒 Full-time<br>🎓 Licensed pharmacist</p>
+            <p class="description">Give medicines to customers and explain how to take them.</p>
+            <div class="skill-tags"><span>medicine</span><span>communication</span><span>attention to detail</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">Healthcare</span>
+            <h3>Medical Technologist</h3>
+            <p class="company">CareLab Diagnostics</p>
+            <p class="info">📍 Iligan City<br>💰 ₱20,000 - ₱28,000 / month<br>🕒 Full-time<br>🎓 Licensed med tech</p>
+            <p class="description">Do laboratory tests like blood and urine tests.</p>
+            <div class="skill-tags"><span>laboratory</span><span>science</span><span>attention to detail</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">Healthcare</span>
+            <h3>Midwife</h3>
+            <p class="company">Mother and Child Clinic</p>
+            <p class="info">📍 Bukidnon<br>💰 ₱18,000 - ₱24,000 / month<br>🕒 Full-time<br>🎓 Licensed midwife</p>
+            <p class="description">Help pregnant mothers and assist during childbirth.</p>
+            <div class="skill-tags"><span>healthcare</span><span>patient care</span><span>patience</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">Healthcare</span>
+            <h3>Caregiver</h3>
+            <p class="company">Golden Care Home</p>
+            <p class="info">📍 Cagayan de Oro<br>💰 ₱12,000 - ₱16,000 / month<br>🕒 Part-time<br>🎓 Caregiving NC II preferred</p>
+            <p class="description">Help elderly people with meals, medicine and daily tasks.</p>
+            <div class="skill-tags"><span>patient care</span><span>patience</span><span>cooking</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+    </div>
+</section>
+
+<section class="cat-section" id="education">
+    <h2 class="cat-title">Education Jobs</h2>
+    <div class="job-container">
+        <div class="job-card">
+            <span class="category">Education</span>
+            <h3>Elementary Teacher</h3>
+            <p class="company">Bright Future School</p>
+            <p class="info">📍 Iligan City<br>💰 ₱18,000 - ₱25,000 / month<br>🕒 Full-time<br>🎓 LET passer</p>
+            <p class="description">Teach Grade 1 to 6 pupils and prepare lesson plans.</p>
+            <div class="skill-tags"><span>teaching</span><span>communication</span><span>patience</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">Education</span>
+            <h3>High School Teacher</h3>
+            <p class="company">Northview High School</p>
+            <p class="info">📍 Cagayan de Oro<br>💰 ₱20,000 - ₱28,000 / month<br>🕒 Full-time<br>🎓 LET passer</p>
+            <p class="description">Teach English or Science to junior high school students.</p>
+            <div class="skill-tags"><span>teaching</span><span>english</span><span>public speaking</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">Education</span>
+            <h3>Tutor</h3>
+            <p class="company">LearnEasy Center</p>
+            <p class="info">📍 Cagayan de Oro<br>💰 ₱250 - ₱400 / hour<br>🕒 Part-time<br>🎓 College students welcome</p>
+            <p class="description">Help students with homework in Math, English and Science.</p>
+            <div class="skill-tags"><span>teaching</span><span>communication</span><span>math</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">Education</span>
+            <h3>Daycare Teacher</h3>
+            <p class="company">Little Stars Daycare</p>
+            <p class="info">📍 Bukidnon<br>💰 ₱10,000 - ₱14,000 / month<br>🕒 Full-time<br>🎓 Education graduate</p>
+            <p class="description">Teach young kids through songs, games and simple lessons.</p>
+            <div class="skill-tags"><span>teaching</span><span>patience</span><span>creativity</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">Education</span>
+            <h3>SPED Teacher</h3>
+            <p class="company">Hope Learning Center</p>
+            <p class="info">📍 Davao City<br>💰 ₱20,000 - ₱27,000 / month<br>🕒 Full-time<br>🎓 LET passer, SPED training</p>
+            <p class="description">Teach and guide learners with special needs.</p>
+            <div class="skill-tags"><span>teaching</span><span>patience</span><span>communication</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+    </div>
+</section>
+
+<section class="cat-section" id="business">
+    <h2 class="cat-title">Business Jobs</h2>
+    <div class="job-container">
+        <div class="job-card">
+            <span class="category">Business</span>
+            <h3>Marketing Assistant</h3>
+            <p class="company">MarketPro</p>
+            <p class="info">📍 Manila<br>💰 ₱16,000 - ₱22,000 / month<br>🕒 Full-time<br>🎓 Fresh graduates welcome</p>
+            <p class="description">Help plan promos and post ads on social media.</p>
+            <div class="skill-tags"><span>marketing</span><span>communication</span><span>social media</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">Business</span>
+            <h3>Sales Representative</h3>
+            <p class="company">Local Business Hub</p>
+            <p class="info">📍 Cebu City<br>💰 ₱14,000 - ₱20,000 / month<br>🕒 Full-time<br>🎓 No experience needed</p>
+            <p class="description">Sell products to customers and reach monthly sales goals.</p>
+            <div class="skill-tags"><span>sales</span><span>communication</span><span>customer service</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">Business</span>
+            <h3>Accountant</h3>
+            <p class="company">Santos Accounting Office</p>
+            <p class="info">📍 Cagayan de Oro<br>💰 ₱25,000 - ₱35,000 / month<br>🕒 Full-time<br>🎓 CPA preferred</p>
+            <p class="description">Prepare financial reports, taxes and payroll.</p>
+            <div class="skill-tags"><span>accounting</span><span>math</span><span>excel</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">Business</span>
+            <h3>Office Clerk</h3>
+            <p class="company">Northern Trading Corp.</p>
+            <p class="info">📍 Cagayan de Oro<br>💰 ₱11,000 - ₱14,000 / month<br>🕒 Full-time<br>🎓 No experience needed</p>
+            <p class="description">File documents, answer calls and help in the office.</p>
+            <div class="skill-tags"><span>organization</span><span>computer</span><span>communication</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">Business</span>
+            <h3>Call Center Agent</h3>
+            <p class="company">VoiceLink BPO</p>
+            <p class="info">📍 Cagayan de Oro<br>💰 ₱17,000 - ₱22,000 / month<br>🕒 Full-time<br>🎓 No experience needed</p>
+            <p class="description">Answer customer calls and solve their concerns in English.</p>
+            <div class="skill-tags"><span>english</span><span>communication</span><span>customer service</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+    </div>
+</section>
+
+<section class="cat-section" id="hospitality">
+    <h2 class="cat-title">Hospitality Jobs</h2>
+    <div class="job-container">
+        <div class="job-card">
+            <span class="category">Hospitality</span>
+            <h3>Hotel Front Desk Staff</h3>
+            <p class="company">Sunrise Hotel</p>
+            <p class="info">📍 Cagayan de Oro<br>💰 ₱14,000 - ₱18,000 / month<br>🕒 Full-time<br>🎓 No experience needed</p>
+            <p class="description">Welcome guests, check them in and answer their questions.</p>
+            <div class="skill-tags"><span>communication</span><span>customer service</span><span>organization</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">Hospitality</span>
+            <h3>Restaurant Staff</h3>
+            <p class="company">Good Taste Restaurant</p>
+            <p class="info">📍 Davao City<br>💰 ₱11,000 - ₱14,000 / month<br>🕒 Part-time<br>🎓 No experience needed</p>
+            <p class="description">Take orders, serve food and keep tables clean.</p>
+            <div class="skill-tags"><span>cooking</span><span>customer service</span><span>teamwork</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">Hospitality</span>
+            <h3>Cook</h3>
+            <p class="company">Lutong Bahay Kitchen</p>
+            <p class="info">📍 Cagayan de Oro<br>💰 ₱13,000 - ₱18,000 / month<br>🕒 Full-time<br>🎓 Cookery NC II preferred</p>
+            <p class="description">Cook Filipino dishes and keep the kitchen clean.</p>
+            <div class="skill-tags"><span>cooking</span><span>food safety</span><span>teamwork</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">Hospitality</span>
+            <h3>Barista</h3>
+            <p class="company">Bean There Cafe</p>
+            <p class="info">📍 Bukidnon<br>💰 ₱10,000 - ₱13,000 / month<br>🕒 Part-time<br>🎓 Training provided</p>
+            <p class="description">Make coffee and drinks and handle the cashier.</p>
+            <div class="skill-tags"><span>coffee making</span><span>customer service</span><span>cash handling</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">Hospitality</span>
+            <h3>Housekeeper</h3>
+            <p class="company">Mountain View Resort</p>
+            <p class="info">📍 Bukidnon<br>💰 ₱11,000 - ₱14,000 / month<br>🕒 Full-time<br>🎓 No experience needed</p>
+            <p class="description">Clean and prepare rooms for hotel guests.</p>
+            <div class="skill-tags"><span>cleaning</span><span>organization</span><span>teamwork</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+    </div>
+</section>
+
+<section class="cat-section" id="engineering">
+    <h2 class="cat-title">Engineering Jobs</h2>
+    <div class="job-container">
+        <div class="job-card">
+            <span class="category">Engineering</span>
+            <h3>Civil Engineering Assistant</h3>
+            <p class="company">BuildRight Engineering</p>
+            <p class="info">📍 Iligan City<br>💰 ₱20,000 - ₱28,000 / month<br>🕒 Full-time<br>🎓 Engineering graduate</p>
+            <p class="description">Help engineers check building plans and construction sites.</p>
+            <div class="skill-tags"><span>engineering</span><span>math</span><span>autocad</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">Engineering</span>
+            <h3>Electrical Technician</h3>
+            <p class="company">PowerFix Services</p>
+            <p class="info">📍 Cagayan de Oro<br>💰 ₱16,000 - ₱22,000 / month<br>🕒 Full-time<br>🎓 EIM NC II preferred</p>
+            <p class="description">Install and repair electrical systems in buildings.</p>
+            <div class="skill-tags"><span>electrical</span><span>repair</span><span>technical</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">Engineering</span>
+            <h3>Mechanical Engineer</h3>
+            <p class="company">MetalTech Industries</p>
+            <p class="info">📍 Misamis Oriental<br>💰 ₱28,000 - ₱38,000 / month<br>🕒 Full-time<br>🎓 Licensed engineer</p>
+            <p class="description">Maintain and repair factory machines.</p>
+            <div class="skill-tags"><span>engineering</span><span>repair</span><span>math</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">Engineering</span>
+            <h3>CAD Drafter</h3>
+            <p class="company">PlanMakers Design</p>
+            <p class="info">📍 Cagayan de Oro<br>💰 ₱16,000 - ₱22,000 / month<br>🕒 Full-time<br>🎓 AutoCAD skills required</p>
+            <p class="description">Draw house and building plans using AutoCAD.</p>
+            <div class="skill-tags"><span>autocad</span><span>drawing</span><span>technical</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">Engineering</span>
+            <h3>Electronics Engineer</h3>
+            <p class="company">CircuitPro Technologies</p>
+            <p class="info">📍 Cagayan de Oro<br>💰 ₱25,000 - ₱35,000 / month<br>🕒 Full-time<br>🎓 Licensed ECE</p>
+            <p class="description">Design and test electronic parts and circuits.</p>
+            <div class="skill-tags"><span>electronics</span><span>math</span><span>technical</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">Engineering</span>
+            <h3>Surveyor</h3>
+            <p class="company">LandMark Survey Office</p>
+            <p class="info">📍 Bukidnon<br>💰 ₱18,000 - ₱25,000 / month<br>🕒 Full-time<br>🎓 Geodetic engineering graduate</p>
+            <p class="description">Measure land and make maps for building projects.</p>
+            <div class="skill-tags"><span>surveying</span><span>math</span><span>attention to detail</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+    </div>
+</section>
+
+<section class="cat-section" id="agriculture">
+    <h2 class="cat-title">Agriculture Jobs</h2>
+    <div class="job-container">
+        <div class="job-card">
+            <span class="category">Agriculture</span>
+            <h3>Farm Technician</h3>
+            <p class="company">Green Fields Cooperative</p>
+            <p class="info">📍 Bukidnon<br>💰 ₱13,000 - ₱17,000 / month<br>🕒 Full-time<br>🎓 Agriculture graduate</p>
+            <p class="description">Check crops, apply fertilizer and record harvests.</p>
+            <div class="skill-tags"><span>farming</span><span>agriculture</span><span>plants</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">Agriculture</span>
+            <h3>Agriculture Assistant</h3>
+            <p class="company">FreshGrow Farm</p>
+            <p class="info">📍 Misamis Oriental<br>💰 ₱12,000 - ₱15,000 / month<br>🕒 Full-time<br>🎓 No experience needed</p>
+            <p class="description">Help with planting, watering and harvesting vegetables.</p>
+            <div class="skill-tags"><span>agriculture</span><span>teamwork</span><span>plants</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">Agriculture</span>
+            <h3>Plantation Worker</h3>
+            <p class="company">Highland Pineapple Farm</p>
+            <p class="info">📍 Bukidnon<br>💰 ₱400 - ₱500 / day<br>🕒 Seasonal<br>🎓 No experience needed</p>
+            <p class="description">Plant and harvest pineapples in the farm fields.</p>
+            <div class="skill-tags"><span>farming</span><span>teamwork</span><span>physical work</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">Agriculture</span>
+            <h3>Poultry Caretaker</h3>
+            <p class="company">Happy Hen Farm</p>
+            <p class="info">📍 Bukidnon<br>💰 ₱11,000 - ₱14,000 / month<br>🕒 Full-time<br>🎓 No experience needed</p>
+            <p class="description">Feed chickens, collect eggs and keep the farm clean.</p>
+            <div class="skill-tags"><span>animal care</span><span>farming</span><span>cleaning</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">Agriculture</span>
+            <h3>Coffee Farm Worker</h3>
+            <p class="company">Highland Coffee Growers</p>
+            <p class="info">📍 Bukidnon<br>💰 ₱400 - ₱500 / day<br>🕒 Seasonal<br>🎓 No experience needed</p>
+            <p class="description">Plant, pick and dry coffee beans in the highland farms.</p>
+            <div class="skill-tags"><span>farming</span><span>plants</span><span>physical work</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">Agriculture</span>
+            <h3>Fish Farm Technician</h3>
+            <p class="company">BlueWater Aquafarm</p>
+            <p class="info">📍 Misamis Oriental<br>💰 ₱13,000 - ₱17,000 / month<br>🕒 Full-time<br>🎓 Fisheries graduate preferred</p>
+            <p class="description">Feed fish, check water quality and help during harvest.</p>
+            <div class="skill-tags"><span>fish farming</span><span>animal care</span><span>agriculture</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+    </div>
+</section>
+
+<section class="cat-section" id="creative">
+    <h2 class="cat-title">Creative Jobs</h2>
+    <div class="job-container">
+        <div class="job-card">
+            <span class="category">Creative</span>
+            <h3>Graphic Designer</h3>
+            <p class="company">Creative Studio</p>
+            <p class="info">📍 Cagayan de Oro<br>💰 ₱15,000 - ₱25,000 / month<br>🕒 Full-time<br>🎓 Portfolio required</p>
+            <p class="description">Design posters, logos and social media posts.</p>
+            <div class="skill-tags"><span>canva</span><span>photoshop</span><span>creativity</span><span>drawing</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">Creative</span>
+            <h3>Video Editor</h3>
+            <p class="company">Lens and Frame Media</p>
+            <p class="info">📍 Cebu City<br>💰 ₱16,000 - ₱24,000 / month<br>🕒 Full-time<br>🎓 Portfolio required</p>
+            <p class="description">Edit videos for YouTube, ads and events.</p>
+            <div class="skill-tags"><span>video editing</span><span>creativity</span><span>computer</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">Creative</span>
+            <h3>Photographer</h3>
+            <p class="company">Snapshot Studio</p>
+            <p class="info">📍 Cagayan de Oro<br>💰 ₱2,000 - ₱5,000 / event<br>🕒 Freelance<br>🎓 Own camera required</p>
+            <p class="description">Take photos at weddings, birthdays and school events.</p>
+            <div class="skill-tags"><span>photography</span><span>creativity</span><span>communication</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">Creative</span>
+            <h3>Content Writer</h3>
+            <p class="company">WordSmith Digital</p>
+            <p class="info">📍 Work from home<br>💰 ₱12,000 - ₱20,000 / month<br>🕒 Part-time<br>🎓 Good English writing</p>
+            <p class="description">Write blog posts, captions and articles.</p>
+            <div class="skill-tags"><span>writing</span><span>english</span><span>creativity</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">Creative</span>
+            <h3>Social Media Manager</h3>
+            <p class="company">MarketPro</p>
+            <p class="info">📍 Manila<br>💰 ₱18,000 - ₱25,000 / month<br>🕒 Full-time<br>🎓 1 year experience</p>
+            <p class="description">Plan and post content on Facebook, Instagram and TikTok.</p>
+            <div class="skill-tags"><span>social media</span><span>canva</span><span>writing</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">Creative</span>
+            <h3>Animator</h3>
+            <p class="company">MotionPop Studio</p>
+            <p class="info">📍 Work from home<br>💰 ₱18,000 - ₱28,000 / month<br>🕒 Freelance<br>🎓 Portfolio required</p>
+            <p class="description">Make simple cartoon animations for ads and school videos.</p>
+            <div class="skill-tags"><span>animation</span><span>drawing</span><span>creativity</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+    </div>
+</section>
+
+<section class="cat-section" id="skilled-trade">
+    <h2 class="cat-title">Skilled Trade Jobs</h2>
+    <div class="job-container">
+        <div class="job-card">
+            <span class="category">Skilled Trade</span>
+            <h3>Electrician</h3>
+            <p class="company">BrightWire Services</p>
+            <p class="info">📍 Cagayan de Oro<br>💰 ₱15,000 - ₱20,000 / month<br>🕒 Full-time<br>🎓 EIM NC II required</p>
+            <p class="description">Install and fix wiring in homes and buildings.</p>
+            <div class="skill-tags"><span>electrical</span><span>repair</span><span>safety</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">Skilled Trade</span>
+            <h3>Plumber</h3>
+            <p class="company">FlowFix Plumbing</p>
+            <p class="info">📍 Davao City<br>💰 ₱14,000 - ₱19,000 / month<br>🕒 Full-time<br>🎓 Plumbing NC II preferred</p>
+            <p class="description">Fix pipes, faucets, toilets and water leaks.</p>
+            <div class="skill-tags"><span>plumbing</span><span>repair</span><span>physical work</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">Skilled Trade</span>
+            <h3>Welder</h3>
+            <p class="company">SteelMaster Shop</p>
+            <p class="info">📍 Misamis Oriental<br>💰 ₱16,000 - ₱22,000 / month<br>🕒 Full-time<br>🎓 SMAW NC II required</p>
+            <p class="description">Weld metal for gates, grills and frames.</p>
+            <div class="skill-tags"><span>welding</span><span>safety</span><span>technical</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">Skilled Trade</span>
+            <h3>Carpenter</h3>
+            <p class="company">BuildRight Engineering</p>
+            <p class="info">📍 Iligan City<br>💰 ₱600 - ₱800 / day<br>🕒 Contract<br>🎓 1 year experience</p>
+            <p class="description">Build and repair doors, cabinets and roofs.</p>
+            <div class="skill-tags"><span>carpentry</span><span>repair</span><span>physical work</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">Skilled Trade</span>
+            <h3>Auto Mechanic</h3>
+            <p class="company">Speedy Auto Repair</p>
+            <p class="info">📍 Bukidnon<br>💰 ₱14,000 - ₱20,000 / month<br>🕒 Full-time<br>🎓 Automotive NC II preferred</p>
+            <p class="description">Check and repair cars and motorcycles.</p>
+            <div class="skill-tags"><span>repair</span><span>technical</span><span>troubleshooting</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <span class="category">Skilled Trade</span>
+            <h3>Aircon Technician</h3>
+            <p class="company">CoolBreeze Aircon Services</p>
+            <p class="info">📍 Cagayan de Oro<br>💰 ₱14,000 - ₱20,000 / month<br>🕒 Full-time<br>🎓 RAC NC II preferred</p>
+            <p class="description">Clean, install and repair air conditioners.</p>
+            <div class="skill-tags"><span>repair</span><span>electrical</span><span>troubleshooting</span></div>
+            <a class="apply-btn" href="mailto:info@skilltojob.com">Apply Now</a>
+        </div>
+    </div>
+</section>
 
 <footer>
     <p>Skill to Job &copy; 2026 | Student Project</p>
 </footer>
 
-
-<script>
-
-const jobs = [
-
-    {
-        title: "Junior Web Developer",
-        company: "CodeWorks",
-        category: "IT",
-        location: "Cagayan de Oro",
-        skills: ["html", "css", "javascript", "coding"]
-    },
-
-    {
-        title: "IT Support Assistant",
-        company: "TechCare Solutions",
-        category: "IT",
-        location: "Cebu City",
-        skills: ["computer", "troubleshooting", "communication"]
-    },
-
-    {
-        title: "Nursing Assistant",
-        company: "Community Health Center",
-        category: "Healthcare",
-        location: "Cagayan de Oro",
-        skills: ["healthcare", "communication", "teamwork"]
-    },
-
-    {
-        title: "Medical Office Assistant",
-        company: "HealthPlus Clinic",
-        category: "Healthcare",
-        location: "Davao City",
-        skills: ["organization", "computer", "communication"]
-    },
-
-    {
-        title: "Elementary Teacher",
-        company: "Bright Future School",
-        category: "Education",
-        location: "Iligan City",
-        skills: ["teaching", "communication", "patience"]
-    },
-
-    {
-        title: "Tutor",
-        company: "LearnEasy Center",
-        category: "Education",
-        location: "Cagayan de Oro",
-        skills: ["teaching", "communication", "math"]
-    },
-
-    {
-        title: "Marketing Assistant",
-        company: "MarketPro",
-        category: "Business",
-        location: "Manila",
-        skills: ["marketing", "communication", "social media"]
-    },
-
-    {
-        title: "Sales Representative",
-        company: "Local Business Hub",
-        category: "Business",
-        location: "Cebu City",
-        skills: ["sales", "communication", "customer service"]
-    },
-
-    {
-        title: "Hotel Front Desk Staff",
-        company: "Sunrise Hotel",
-        category: "Hospitality",
-        location: "Cagayan de Oro",
-        skills: ["communication", "customer service", "organization"]
-    },
-
-    {
-        title: "Restaurant Staff",
-        company: "Good Taste Restaurant",
-        category: "Hospitality",
-        location: "Davao City",
-        skills: ["cooking", "customer service", "teamwork"]
-    },
-
-    {
-        title: "Civil Engineering Assistant",
-        company: "BuildRight Engineering",
-        category: "Engineering",
-        location: "Iligan City",
-        skills: ["engineering", "math", "autocad"]
-    },
-
-    {
-        title: "Electrical Technician",
-        company: "PowerFix Services",
-        category: "Engineering",
-        location: "Cagayan de Oro",
-        skills: ["electrical", "repair", "technical"]
-    },
-
-    {
-        title: "Farm Technician",
-        company: "Green Fields Cooperative",
-        category: "Agriculture",
-        location: "Bukidnon",
-        skills: ["farming", "agriculture", "plants"]
-    },
-
-    {
-        title: "Agriculture Assistant",
-        company: "FreshGrow Farm",
-        category: "Agriculture",
-        location: "Misamis Oriental",
-        skills: ["agriculture", "teamwork", "plants"]
-    },
-
-    {
-        title: "Graphic Designer",
-        company: "Creative Studio",
-        category: "Creative",
-        location: "Ca
+</body>
+</html>
